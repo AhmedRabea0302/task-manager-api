@@ -3,7 +3,7 @@ const getAllTasks = (req, res) => {
 }
 
 const createTask = (req, res) => {
-    res.status(201).send('Created');
+    res.status(200).json(req.body);
 };
 
 const updateTask = (req, res) => {
@@ -11,7 +11,9 @@ const updateTask = (req, res) => {
 };
 
 const getTask = (req, res) => {
-    res.status(200).send('Task 1');
+    res.status(200).json({
+        id: req.params.id
+    });
 };
 
 const deleteTask = (req, res) => {
