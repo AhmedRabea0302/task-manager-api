@@ -8,7 +8,7 @@ require('dotenv').config();
 
 // Middlewares
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, '/public')));
+app.use(express.static('./public'));
 
 // Routes
 app.get('/', (req, res) => {
